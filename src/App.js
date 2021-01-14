@@ -18,6 +18,7 @@ function App() {
         console.log("response using fetch inside useEffect = ", response)      
         data1 = await response.json();
         setData1(data1);
+        SetLit(true);
         SetFetching(false)  
     }
 
