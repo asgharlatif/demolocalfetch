@@ -1,49 +1,22 @@
-/*
-async function  getData(){
-
-    const response = await fetch('https://jsonplaceholder.typicode.com/todos/1')
-    console.log("response = ", response)
-
-    const data =   response.json();
-    console.log("data = ", data)
-}
-
-
-async function  postData(){
-
-    const response = await fetch('https://jsonplaceholder.typicode.com/posts',{
-
-        method : "Post" ,
-        body:JSON.stringify( {
-            "userId": 1,
-            "id": 1,
-            "title": "delectus aut autem..... my info",
-            "completed": false
-        }),headers:{
-            'Content-type': 'application/json; charset=UTF-8'
-        }
-    } )
-
-
-    console.log("response = ", response)
-    const data =   response.json();
-    console.log("data = ", data)
-}
-
-
-getData();
-postData();
-*/
 
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Lfc from './Lfc';
+
 import reportWebVitals from './reportWebVitals';
 
 
 ReactDOM.render(
+    <div>
     <App />  
+    <br />
+      <span>====================================================================================================</span>
+    <br />
+    <Lfc />
+    </div>
+
   ,
   document.getElementById('root')
 );
