@@ -9,6 +9,7 @@
     "react": "0.0.0-experimental-27659559e",
     "react-dom": "0.0.0-experimental-27659559e",
     "react-scripts": "4.0.1",
+    "surge": "^0.21.7",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
