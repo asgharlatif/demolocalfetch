@@ -24,6 +24,8 @@ function App() {
 
         setTodo(data2);   
 
+        setData(false);
+
         SetFetching(false)  
     }
 
