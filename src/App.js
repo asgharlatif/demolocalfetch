@@ -4,8 +4,10 @@ import React, { useEffect, useState } from 'react';
 
 function App() {
 
-    //let data = {title:"Waiting for Data"} ;
-    let [data1,setData1] = useState({title:"Waiting for Data 1"});
+    let data = {title:"Waiting for Data"} ;
+
+    let [todo,setTodo] = useState(data);
+
     let [isData, setData] = useState(false);
 
     let [isFetching, SetFetching] = useState(false);
@@ -14,10 +16,14 @@ function App() {
 
         async function fetchData(){
         SetFetching(true)  
+
         const response = await fetch('https://jsonplaceholder.typicode.com/todos/3')
-        console.log("response using fetch inside useEffect = ", response)      
-        data1 = await response.json();
-        setData1(data1);      
+        console.log("response using fetch inside useEffect = ", response)    
+
+        let data2 = await response.json();
+
+        setTodo(data2);   
+
         SetFetching(false)  
     }
 
@@ -35,7 +41,7 @@ function App() {
 
     <div>
 
-    Hello World . Slow down the Network to see the effect of useEffect. <br />
+    Hello World . Slow down the Network to see the effect of useEffect.. <br />
     <br />
     This project is using following 
     <ul>
@@ -44,8 +50,8 @@ function App() {
     </ul>
     
     <br />
-    <span>Field Name =[Title] = Fetched Value = <b> [{data1.title}] </b> </span><br />
-    <span>Field Name =[UserId] = Fetched Value = <b> [{data1.userId}] </b></span><br />    
+    <span>Field Name =[Title] = Fetched Value = <b> [{todo.title}] </b> </span><br />
+    <span>Field Name =[UserId] = Fetched Value = <b> [{todo.userId}] </b></span><br />    
 
     <br></br>
 
