@@ -6,7 +6,7 @@ function App() {
 
     //let data = {title:"Waiting for Data"} ;
     let [data1,setData1] = useState({title:"Waiting for Data 1"});
-    let [isLit, SetLit] = useState(0);
+    let [isData, setData] = useState(false);
 
     let [isFetching, SetFetching] = useState(false);
 
@@ -17,14 +17,13 @@ function App() {
         const response = await fetch('https://jsonplaceholder.typicode.com/todos/3')
         console.log("response using fetch inside useEffect = ", response)      
         data1 = await response.json();
-        setData1(data1);
-        SetLit(true);
+        setData1(data1);      
         SetFetching(false)  
     }
 
     fetchData();
 
-    },[isLit]);
+    },[isData]);
 
     
   if (isFetching){
