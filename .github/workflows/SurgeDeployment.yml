@@ -39,4 +39,4 @@ jobs:
         run: npm install -g surge
         
       - name: Run Surge
-        run: surge ./build demo-fetch_using_useeffect-muhammadali.surge.sh --token ${{secrets.SURGE_TOKEN}}   
+        run: surge ./build demo-fetch-using-useeffect-muhammadali.surge.sh --token ${{secrets.SURGE_TOKEN}}   
